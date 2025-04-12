@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Junasta | CoffeShop</title>
+        <!--feather-icons-->
+        <script src="https://unpkg.com/feather-icons"></script>
+        <!-- Linking font awesome for icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+        <!-- style -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header | Navigation  -->
+        <header>
+            <nav class="navbar section-content">
+                <a href="#" class="nav-logo">
+                    <h2 class="logo-text">
+                        <i class="icon-coffee" data-feather="coffee"></i
+                        >Junasta<span>Coffee</span>.
+                    </h2>
+                </a>
+                <ul class="nav-menu">
+                    <button
+                        id="menu-close-button"
+                        class="closed"
+                    >Close</button>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Kontak</a>
+                    </li>
+                </ul>
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </nav>
+        </header>
+
+        <main>
+            <!--Hero Section-->
+            <section class="hero-section">
+                <div class="section-content">
+                    <div class="hero-details">
+                        <h2 class="title">Junasta<span>Coffee</span></h2>
+                        <h3 class="subtitle">
+                            Ruang nyaman untuk menikmati kopi dan cerita
+                            kehidupan.
+                        </h3>
+                        <p class="description">
+                            Junasta Coffee hadir sebagai tempat berkumpul,
+                            bercerita, dan menikmati seduhan kopi terbaik. Dari
+                            pilihan biji kopi lokal hingga racikan khas kami,
+                            setiap cangkir disiapkan dengan sepenuh hati.
+                            Kunjungi halaman lainnya untuk mengenal lebih dalam
+                            tentang kami, melihat menu, hingga memesan produk
+                            favoritmu.
+                        </p>
+
+                        <div class="buttons">
+                            <a href="#" class="button order-now">Mulai Pesan</a>
+                            <a href="#" class="button contact-us"
+                                >Kontak Kami</a
+                            >
+                        </div>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="HeroCase.png" alt="Hero" class="hero-image" />
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- icon script -->
+
+        <script>
+            feather.replace();
+        </script>
+
+        <!-- javascript -->
+        <script src="script.js"></script>
+    </body>
+</html>
