@@ -1,5 +1,5 @@
 /* Importing Google Fonts */
-@import url("https://fonts.googleapis.com/css?family=Miniver&family=Poppins:ital,wght@0,100;0,500;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,500;0,700;1,400&family=Great+Vibes&family=Parisienne&display=swap");
 
 * {
     margin: 0;
@@ -10,12 +10,15 @@
 :root {
     /* Colors */
     --white-color: #fff;
+    --page-color: #1e1b18;
     --dark-color: #252525;
     --grey-color: #ccc;
     --primary: #b67845;
     --bg: #010101;
     --navbg: #190704;
     --button-color: #b6862c;
+    --font-heading-color: #c29d72;
+    --text-color: #f5e9da;
 
     /* Font Size */
     --font-size-s: 0.9rem;
@@ -59,6 +62,22 @@ img {
     margin: 0 auto;
     padding: 0 20px;
     max-width: var(--site-max-width);
+}
+.section-title {
+    padding: 60px 0 100px;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xl);
+    display: inline-block;
+    position: relative;
+}
+.section-title::after {
+    content: "";
+    width: 120px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--button-color);
 }
 
 /* Navbar Styling */
@@ -133,12 +152,15 @@ header .navbar {
     margin-top: 8px;
     max-width: 70%;
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
+    color: #d1a074;
 }
 .hero-section .hero-details .description {
     max-width: 70%;
     margin: 24px 0 48px;
+    font-weight: var(--font-weight-medium);
     font-size: var(--font-size-m);
+    color: var(--text-color);
 }
 .hero-section .hero-details .buttons {
     display: flex;
@@ -181,6 +203,65 @@ header .navbar {
     border: 10px solid #fffb6b6;
     position: center;
 }
+/* About Section Styling */
+.about-section {
+    padding: 120px 0;
+    background: var(--page-color);
+}
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-section .about-image-wrapper {
+    max-width: 500px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 15px;
+    background: var(--white-color);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+}
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid #fffb6b6;
+}
+.about-section .about-details .section-title,
+.about-section .subtitle-text {
+    padding: 0;
+    color: var(--font-heading-color);
+}
+.about-section .about-details {
+    max-width: 50%;
+}
+.about-section .about-details .text-1,
+.about-section .about-details .text-2 {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: left;
+    font-size: var(--font-size-n);
+    color: var(--text-color);
+}
+.about-section .about-details .text-2 {
+    margin-top: 10px;
+}
+.about-section .social-link-list {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.about-section .social-link-list .social-link {
+    color: #f5deb3;
+    font-size: var(--font-size-l);
+    transition: 0.2 ease;
+}
+.about-section .social-link-list .social-link:hover {
+    color: #c29d72;
+}
 /* Responsive media query for max-width 900px */
 @media screen and (max-width: 900px) {
     :root {
@@ -198,6 +279,13 @@ header .navbar {
         width: 100%;
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, 0.2);
+    }
+    .section-title {
+        display: block;
+        text-align: center;
+    }
+    .section-title::after {
+        margin: 10px auto 0;
     }
 
     /* Menu Open | Close Button */
@@ -267,23 +355,49 @@ header .navbar {
         margin-top: 17px;
         font-size: var(--font-size-l);
     }
-}
+    /* Hero Section Styling For Mobile */
+    .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .hero-section .hero-details :is(.subtitle, .description),
+    .about-section .about-details {
+        max-width: 100%;
+    }
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+    .about-section .section-content {
+        gap: 70px;
+        flex-direction: column-reverse;
+    }
 
-/* Hero Section Styling For Mobile */
-.hero-section .section-content {
-    gap: 50px;
-    text-align: center;
-    padding: 30px 20px 20px;
-    flex-direction: column-reverse;
-    justify-content: center;
-}
-.hero-section .hero-details :is(.subtitle, .description) {
-    max-width: 100%;
-}
-.hero-section .hero-details .buttons {
-    justify-content: center;
-}
-.hero-section .hero-image-wrapper {
-    max-width: 270px;
-    margin-right: 0;
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        display: block;
+        aspect-ratio: 1;
+    }
+    .about-section .about-details .section-title,
+    .about-section .subtitle-text {
+        padding: 0;
+        color: var(--font-heading-color);
+        text-align: center;
+    }
+    .about-section .about-details .text-1,
+    .about-section .about-details .text-2 {
+        line-height: 30px;
+        margin: 50px 0 30px;
+        text-align: center;
+        font-size: var(--font-size-n);
+        color: var(--text-color);
+    }
 }
