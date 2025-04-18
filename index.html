@@ -11,6 +11,11 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         />
+        <!-- Linking swipe CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
         <!-- style -->
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -30,16 +35,19 @@
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Tentang Kami</a>
+                        <a href="#about" class="nav-link">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Menu</a>
+                        <a href="#menu" class="nav-link">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Produk</a>
+                        <a href="#story" class="nav-link">Cerita Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Kontak</a>
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Kontak</a>
                     </li>
                 </ul>
                 <button id="menu-open-button" class="fas fa-bars"></button>
@@ -48,7 +56,7 @@
 
         <main>
             <!--Hero Section-->
-            <section class="hero-section">
+            <section class="hero-section" >
                 <div class="section-content">
                     <div class="hero-details">
                         <h2 class="title">Junasta<span>Coffee</span></h2>
@@ -57,18 +65,14 @@
                             kehidupan.
                         </h3>
                         <p class="description">
-                            Junasta Coffee hadir sebagai tempat berkumpul,
-                            bercerita, dan menikmati seduhan kopi terbaik. Dari
-                            pilihan biji kopi lokal hingga racikan khas kami,
-                            setiap cangkir disiapkan dengan sepenuh hati.
-                            Kunjungi halaman lainnya untuk mengenal lebih dalam
-                            tentang kami, melihat menu, hingga memesan produk
-                            favoritmu.
+                            Temukan rasa, cerita, dan momen di setiap seduhan.
+                            Kami menyajikan kopi terbaik dalam suasana yang
+                            membuatmu nyaman.
                         </p>
 
                         <div class="buttons">
-                            <a href="#" class="button order-now">Mulai Pesan</a>
-                            <a href="#" class="button contact-us"
+                            <a href="#menu" class="button order-now">Mulai Pesan</a>
+                            <a href="#contact" class="button contact-us"
                                 >Kontak Kami</a
                             >
                         </div>
@@ -80,7 +84,7 @@
             </section>
 
             <!-- About Section -->
-            <section class="about-section">
+            <section class="about-section" id="about">
                 <div class="section-content">
                     <div class="about-image-wrapper">
                         <img
@@ -125,7 +129,7 @@
             </section>
 
             <!-- Menu Section -->
-            <section class="menu-section">
+            <section class="menu-section" id="menu">
                 <h2 class="section-title">Menu Kami</h2>
                 <div class="section-content">
                     <ul class="menu-list">
@@ -210,12 +214,181 @@
                     </ul>
                 </div>
             </section>
+
+            <!-- Story Section -->
+            <section class="story-section" id="story">
+                <h2 class="section-title">Cerita Kopi Kami</h2>
+                <h3 class="subtitle">
+                    Catatan kecil dari balik seduhan Junasta Coffee
+                </h3>
+                <div class="section-content">
+                    <div class="slider-container swiper">
+                        <div class="slider-wrapper">
+                            <ul class="story-list swiper-wrapper">
+                                <li class="story swiper-slide">
+                                    <img
+                                        src="StoryCase3.jpg"
+                                        alt="Foto story"
+                                        class="story-image"
+                                    />
+                                    <h3 class="name">
+                                        Pertama Kali Nyeduh Manual Brew
+                                    </h3>
+                                    <i class="feed"
+                                        >Aku masih inget banget waktu pertama
+                                        kali coba nyeduh kopi pakai V60. Bingung
+                                        antara rasio air dan kopi, deg-degan
+                                        takut kepahitan. Tapi setelah beberapa
+                                        kali coba, aku mulai paham bahwa nyeduh
+                                        kopi itu soal rasa, intuisi, dan
+                                        kesabaran. Sejak saat itu, seduhan pagi
+                                        jadi ritual favoritku.</i
+                                    >
+                                </li>
+                                <li class="story swiper-slide">
+                                    <img
+                                        src="StoryCase2.jpg"
+                                        alt="Foto story"
+                                        class="story-image"
+                                    />
+                                    <h3 class="name">Kopi Favorit Versi Aku</h3>
+                                    <i class="feed"
+                                        >Di antara semua yang pernah kucoba,
+                                        cappuccino tetap jadi favorit. Kombinasi
+                                        espresso dan susu berbuih lembut itu
+                                        nggak pernah gagal bikin suasana hati
+                                        tenang. Kadang aku tambahin kayu manis
+                                        sedikit biar ada aroma hangatnya.</i
+                                    >
+                                </li>
+                                <li class="story swiper-slide">
+                                    <img
+                                        src="StoryCase1.jpg"
+                                        alt="Foto story"
+                                        class="story-image"
+                                    />
+                                    <h3 class="name">
+                                        Belajar dari Rasa Pahit
+                                    </h3>
+                                    <i class="feed"
+                                        >Awalnya kupikir kopi yang enak itu
+                                        harus manis. Tapi ternyata pahit pun
+                                        punya tempatnya sendiri. Pahit bisa jadi
+                                        jujur, dalam, dan menenangkan. Sama
+                                        seperti hidup, rasa pahit dalam kopi
+                                        ngajarin aku untuk lebih menghargai
+                                        momen sederhana.</i
+                                    >
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-slide-button swiper-button-prev"></div>
+                            <div class="swiper-slide-button swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Gallery section -->
+            <section class="gallery-section" id="gallery">
+             <h2 class="section-title">Gallery</h2>
+             <div class="section-content">
+              <ul class="gallery-list">
+               <li class="gallery-item">
+                <img src="Gallery1.jpg" alt="Gallery" class="gallery-image">
+               </li>
+               <li class="gallery-item">
+                <img src="Gallery2.jpg" alt="Gallery" class="gallery-image">
+               </li>
+               <li class="gallery-item">
+                <img src="Gallery3.jpg" alt="Gallery" class="gallery-image">
+               </li>
+               <li class="gallery-item">
+                <img src="Gallery4.jpg" alt="Gallery" class="gallery-image">
+               </li>
+               <li class="gallery-item">
+                <img src="Gallery5.jpg" alt="Gallery" class="gallery-image">
+               </li>
+               <li class="gallery-item">
+                <img src="Gallery6.jpg" alt="Gallery" class="gallery-image">
+               </li>
+              </ul>
+             </div>
+            </section>
+            
+            <!-- Contact section -->
+            <section class="contact-section" id="contact">
+             <h2 class="section-title">Kontak Kami</h2>
+             <div class="section-content">
+              <ul class="contact-info-list">
+               <li class="contact-info">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <p>Jl. Cempaka No.12, Tegal, Jawa Tengah 52123</p>
+               </li>
+               <li class="contact-info">
+                <i class="fa-regular fa-envelope"></i>
+                <p>halo@junastacoffee.com</p>
+               </li>
+               <li class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <p>(882) 167-14457</p>
+               </li>
+               <li class="contact-info">
+                <i class="fa-regular fa-clock"></i>
+                <p>Senin - Sabtu | 08.00 - 21.00 WIB</p>
+               </li>
+               <li class="contact-info">
+                <i class="fa-regular fa-clock"></i>
+                <p>Minggu | 09.00 - 17.00 WIB</p>
+               </li>
+               <li class="contact-info">
+                <i class="fa-solid fa-globe"></i>
+                <p>www.portfoliojuna.com</p>
+               </li>
+              </ul>
+              
+              <form action="#" class="contact-form">
+               <input type="text" placeholder="Masukan Nama"class="form-input" required>
+               <input type="email" placeholder="Masukan Email"class="form-input" required>
+               <textarea placeholder="Masukan Pesan" class="form-input" required></textarea>
+               <button class="submit-button">Kirim</button>
+              </form>
+             </div>
+            </section>
+            
+            <!-- Footer section -->
+            <footer class="footer-section">
+             <div class="section-content">
+              <p class="copyright-text">© 2025 Junasta Coffee</p>
+              
+              <div class="social-link-list">
+                            <a href="#" class="social-link"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                            <a href="#" class="social-link"
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                            <a href="#" class="social-link"
+                                ><i class="fa-brands fa-twitter"></i
+                            ></a>
+              </div>
+              
+              <p class="policy-text">
+               <a href="#" class="policy-link">Privacy policy</a>
+               <span class="separator">•</span>
+               <a href="#" class="policy-link">Refund policy</a>
+              </p>
+             </div>
+            </footer>
         </main>
 
         <!-- icon script -->
         <script>
             feather.replace();
         </script>
+
+        <!-- Linking swiper script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <!-- javascript -->
         <script src="script.js"></script>
