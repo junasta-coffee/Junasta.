@@ -2,11 +2,13 @@ const navLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
 
-menuOpenButton.addEventListener("click", () => {
+menuOpenButton.addEventListener("click", (e) => {
+ e.preventDefault();
     document.body.classList.add("show-mobile-menu");
 });
 
-menuCloseButton.addEventListener("click", () => {
+menuCloseButton.addEventListener("click", (e) => {
+ e.preventDefault();
     document.body.classList.remove("show-mobile-menu");
 });
 
