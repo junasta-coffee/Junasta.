@@ -512,6 +512,11 @@ header .navbar {
         --font-size-xl: 1.5rem;
         --font-size-xxl: 1.8rem;
     }
+    body.show-mobile-menu{
+     overflow: hidden;
+     position: fixed;
+     width: 100%;
+    }
     body.show-mobile-menu header::before {
         content: "";
         position: fixed;
